@@ -5,6 +5,7 @@ const userArrays = [
 ];
 
 const updateUserArrays = [...userArrays, user4 = {id : 4, firstName : "Frank",lastName : "Torben",username : "TorbenFrank_1999_Hoffweg12"}];
+
 const updateUserArrays2 = updateUserArrays.map(changeName);
     
 function changeName(person) {
