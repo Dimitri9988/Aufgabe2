@@ -1,3 +1,57 @@
+//const R = require("./rambda.min.js");
+
+const words = ["zihen", "kommen", "geben"]
+
+
+
+
+//impure
+let counter = 0
+
+function arrayLenthg () {
+        return counter++;
+};
+
+for (let i = 0; i < words.length; i++) {
+    arrayLenthg();
+}
+console.log(counter);
+
+
+//pure
+let counter1 = 0
+
+function arrayLenthg1 (counter1) {
+        return counter1 + 1;
+};
+
+for (let i = 0; i < words.length; i++) {
+    counter1 = arrayLenthg1(counter1);
+}
+console.log(counter1);
+
+
+
+
+
+
+/*
+const prefixWord = R.curry((prefix, word) => {
+    return `${prefix}${word}`;
+});
+
+const fullPrefixWord = prefixWord("an");
+
+console.log(words.map(fullPrefixWord))
+
+
+
+
+
+
+
+
+/*
 const studentGrades = [ 
     {name: 'Joe', grade: 88},
     {name: 'Jen', grade: 94},
@@ -34,4 +88,8 @@ const studentFeedback =  () => {
 
 
 
-console.log(studentGrades.map(studentFeedback()))
+//console.log(studentGrades.map(studentFeedback()))
+
+
+
+*/
