@@ -1,6 +1,10 @@
 const R = require("./rambda.min.js");
 
-const sentence = "Wooow cool";
-const countWords = R.pipe(R.length, R.split);
+const sentence = "Wo1o1ow cool 20";
+const countWords = R.compose(R.filter(isNaN), R.split);
 
-console.log(countWords("", sentence));
+
+
+
+console.log(countWords( "", sentence));
+
